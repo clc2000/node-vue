@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>v-if 测试页面</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ </head>
+
+<body>
+  <div id="app">
+    <label for="r1">显示下一行</label><input type="checkbox" v-model="seen" id="r1">
+    <br><br>
+    <p v-if="seen"> 能看到我吗？ </p>
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+
+      data: {
+        seen: false
+      }
+    })
+  </script>
+
+</body>
+</html>

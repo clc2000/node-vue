@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <title>v-if 测试页面</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <label for="r1">输入考试分数：</label>
+    <input id="r1" type="number" v-model="value"></inpu>
+    <br><br>
+
+    <p>您的成绩等级为： </p>
+
+    <div v-if="value >= 90">
+      A
+    </div>
+    <div v-else-if="value >= 80">
+      B
+    </div>
+    <div v-else-if="value >= 70">
+      C
+    </div>
+    <div v-else>
+      Not A/B/C
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+
+      data: {
+        value: 97
+      }
+    })
+  </script>
+
+</body>
+
+</html>

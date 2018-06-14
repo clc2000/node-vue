@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>vue demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ </head>
+
+<body>
+
+  <div id="app">
+    <ul>
+      <!-- loop list -->
+      <li v-for="item in list">
+        {{item.title}}
+      </li>
+    </ul>
+
+    <ul>
+      <!-- loop attribution value -->
+      <li v-for="value in object">
+        {{value}}
+      </li>
+    </ul>
+
+    <ul>
+      <!-- loop attribution name and value -->
+      <li v-for="(value, key) in object">
+        {{key}} : {{value}}
+      </li>
+    </ul>
+
+    <ul>
+      <!-- loop attribution index, name and value -->
+      <li v-for="(value, key, index) in object">
+        {{index}} : {{key}} : {{value}}
+      </li>
+    </ul>
+
+    <ul>
+      <!-- loop integer -->
+      <li v-for="n in 5">
+        {{n}}
+      </li>
+    </ul>
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+      data: {
+        list: [
+          {title: 'us'},
+          {title: 'china'},
+          {title: 'englist'}
+        ],
+
+        object: {
+          name:    'cui',
+          sex:     'male',
+          height:  '180'
+        }
+      }
+    })
+  </script>
+</body>
+</html>

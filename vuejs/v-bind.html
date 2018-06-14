@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <title>v-if 测试页面</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <style>
+    .active {
+      background: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <label for="r1">下一行红色字体</label><input type="checkbox" v-model="seen" id="r1">
+    <br><br>
+    <p v-bind:class="{active: seen}"> 我是红色背景吗？ </p>
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+
+      data: {
+        seen: false
+      }
+    })
+  </script>
+
+</body>
+
+</html>

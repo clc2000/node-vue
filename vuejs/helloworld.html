@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <title>老崔的第一个vue例子</title>
+  <!-- 开发环境版本，包含了用帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<style>
+  .class1 {
+    background: #444;
+    color: #eee;
+  }
+</style>
+
+<body>
+  <div id="app">
+    <!-- 引用文本 -->
+    <h1>{{message}}</h1>
+    <p>{{details()}}</p>
+
+    <!-- 引用html语句 -->
+    <div v-html="vh"></div>
+
+    <!-- html属性里引用vue值 -->
+    <label for="r1">修改颜色</label><input type="checkbox" v-model="class1" id="r1">
+    <br><br>
+    <div v-bind:class="{'class1': class1}">
+      directiva v-bind:class
+    </div>
+  </div>
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World!',
+        data2: 'haha',
+
+        vh: '<h1>老崔果园</h1>',
+
+        class1: false
+      },
+      methods: {
+        details: function() {
+          return "新的旅程！"
+        }
+      }
+    })
+  </script>
+
+</body>
+
+</html>

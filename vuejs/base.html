@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>vue demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ </head>
+
+<body>
+
+  <div id="app">
+    <!-- 引用文本 -->
+    <h1>{{message}}</h1>
+    <p>{{details()}}</p>
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World!',
+      },
+      methods: {
+        details: function() {
+          return "新的旅程！"
+        }
+      }
+    })
+  </script>
+</body>
+</html>
